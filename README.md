@@ -44,6 +44,21 @@ The frontend of the project will be deployed on Netlify as previously mentioned.
 The backend of the project will be deployed on Heroku with Heroku's Postgres integration for the relational database.
 
 
+# Local Build Instructions
+To build this website yourself, open up a terminal and navigate to where you want the project to be located. Begin by cloning the repository and moving into the directory:
+```bash
+git clone https://github.com/Jamming17.portfolio
+cd portfolio
+```
+Make sure you have [Node.js](https://nodejs.org/en/download) installed on your system (v20 or later recommended). Once installed, run the following command to install all packages for the project.
+```bash
+npm install
+```
+Lastly, start the website with Vite using the following command:
+```bash
+npm run dev
+```
+This will build the website and run it locally. This can be accessed on http://localhost:5173, but if this doesn't work, press `o + Enter` on the command line to open in a browser.
 
 # My Links
 

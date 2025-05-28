@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-        <div className="prose max-w-3xl mx-auto">
+        <div className="prose max-w-5xl mx-auto">
             <h1 className="text-4xl font-bold mb-4">Homepage</h1>
             <img
                 src="/src/assets/stonehenge.jpg"

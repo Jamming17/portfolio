@@ -14,11 +14,8 @@ export default function Home() {
                 I have studied at the University of Southampton for the past three years and have almost graduated with a <strong className="text-yellow-100">Bachelor's Degree in Computer Science</strong>. Throughout my university experience, I have developed a strong interest in many areas of software development.<br className="mb-6"/>
                 My degree has given me a solid foundation in many programming languages, full-stack development, cloud development, machine learning and secure development. Details of my skills can be found on the <Link to="/competencoes" className="underline">competencies</Link> page of this site. Additionally, I have completed many projects which can be found in detail on the <Link to="/projects" className="underline">projects</Link> page.<br className="mb-6"/>
                 I am particularly passionate about writing clean and efficient code to ease collaboration work and keeping software secure and protected against vulnerabilities.<br className="mb-6"/>
-                 I am currently based in the UK and actively seeking opportunities in <strong className="text-yellow-100">south England</strong> and in <strong className="text-yellow-100">Reykjavík, Iceland</strong>. I am eager to bring my adaptability, enthusiasm and problem-solving skills into the tech industry as I begin my career.
+                I am currently based in the UK and actively seeking opportunities in <strong className="text-yellow-100">south England</strong> and in <strong className="text-yellow-100">Reykjavík, Iceland</strong>. I am eager to bring my adaptability, enthusiasm and problem-solving skills into the tech industry as I begin my career.
             </p>
         </div>
     );
 }
-
-
-// MOVE CURRENT JOB SEARCH STUFF TO AFTER UNI STUFF YOU GOOSE

@@ -1,54 +1,96 @@
 import CompetencyCategory from "/src/components/CompetencyCategory";
 
+import pythonLogo from "../assets/logos/python.png";
+import javaLogo from "../assets/logos/java.png";
+import csharpLogo from "../assets/logos/csharp.png";
+import javascriptLogo from "../assets/logos/javascript.png";
+import haskellLogo from "../assets/logos/haskell.png";
+
+import htmlcssLogo from "../assets/logos/htmlcss.png";
+import reactLogo from "../assets/logos/react.png";
+import vuejsLogo from "../assets/logos/vuejs.png";
+import tailwindcssLogo from "../assets/logos/tailwindcss.png";
+import bootstrapLogo from "../assets/logos/bootstrap.png";
+import viteLogo from "../assets/logos/vite.png";
+
+import nodejsLogo from "../assets/logos/nodejs.png";
+import expressjsLogo from "../assets/logos/expressjs.png";
+import azurepythonfunctionappLogo from "../assets/logos/azurepythonfunctionapp.png";
+import cosmosdbLogo from "../assets/logos/cosmosdb.png";
+
+import azureLogo from "../assets/logos/azure.png";
+import gaeLogo from "../assets/logos/gae.png";
+import netlifyLogo from "../assets/logos/netlify.png";
+import herokuLogo from "../assets/logos/heroku.png";
+
+import burpsuiteLogo from "../assets/logos/burpsuite.png";
+import wiresharkLogo from "../assets/logos/wireshark.png";
+import xssLogo from "../assets/logos/xss.png";
+import killchainLogo from "../assets/logos/killchain.png";
+
+import numpyLogo from "../assets/logos/numpy.png";
+import pandasLogo from "../assets/logos/pandas.png";
+import tensorflowLogo from "../assets/logos/tensorflow.png";
+import scikitlearnLogo from "../assets/logos/scikitlearn.png";
+import openaiLogo from "../assets/logos/openai.png";
+
+import scrumLogo from "../assets/logos/scrum.png";
+import agileLogo from "../assets/logos/agile.png";
+import umlLogo from "../assets/logos/uml.png";
+
+import junitLogo from "../assets/logos/junit.png";
+import pythonunittestLogo from "../assets/logos/pythonunittest.png";
+
+
 export default function Competencies() {
     const programmingLanguages = [
-        { name: "Python", logo: "/src/assets/logos/python.png" },
-        { name: "Java", logo: "/src/assets/logos/java.png" },
-        { name: "C#", logo: "/src/assets/logos/csharp.png" },
-        { name: "JavaScript", logo: "/src/assets/logos/javascript.png" },
-        { name: "Haskell", logo: "/src/assets/logos/haskell.png" }
+        { name: "Python", logo: pythonLogo },
+        { name: "Java", logo: javaLogo },
+        { name: "C#", logo: csharpLogo },
+        { name: "JavaScript", logo: javascriptLogo },
+        { name: "Haskell", logo: haskellLogo }
     ];
     const frontendTechnologies = [
-        { name: "CSS + HTML", logo: "/src/assets/logos/htmlcss.png" },
-        { name: "React", logo: "/src/assets/logos/react.png" },
-        { name: "Vue.js", logo: "/src/assets/logos/vuejs.png" },
-        { name: "Tailwind CSS", logo: "/src/assets/logos/tailwindcss.png" },
-        { name: "Bootstrap", logo: "/src/assets/logos/bootstrap.png" },
-        { name: "Vite", logo: "/src/assets/logos/vite.png" }
+        { name: "CSS + HTML", logo: htmlcssLogo },
+        { name: "React", logo: reactLogo },
+        { name: "Vue.js", logo: vuejsLogo },
+        { name: "Tailwind CSS", logo: tailwindcssLogo },
+        { name: "Bootstrap", logo: bootstrapLogo },
+        { name: "Vite", logo: viteLogo }
     ];
     const backendTechnologies = [
-        { name: "Node.js", logo: "/src/assets/logos/nodejs.png" },
-        { name: "Express.js", logo: "/src/assets/logos/expressjs.png" },
-        { name: "Azure Python Functions", logo: "/src/assets/logos/azurepythonfunctionapp.png" },
-        { name: "CosmosDB", logo: "/src/assets/logos/cosmosdb.png" }
+        { name: "Node.js", logo: nodejsLogo },
+        { name: "Express.js", logo: expressjsLogo },
+        { name: "Azure Python Functions", logo: azurepythonfunctionappLogo },
+        { name: "CosmosDB", logo: cosmosdbLogo }
     ];
     const cloudAndDeployment = [
-        { name: "Microsoft Azure", logo: "/src/assets/logos/azure.png" },
-        { name: "Google App Engine", logo: "/src/assets/logos/gae.png" },
-        { name: "Netlify", logo: "/src/assets/logos/netlify.png" },
-        { name: "Heroku", logo: "/src/assets/logos/heroku.png" }
-    ]
+        { name: "Microsoft Azure", logo: azureLogo },
+        { name: "Google App Engine", logo: gaeLogo },
+        { name: "Netlify", logo: netlifyLogo },
+        { name: "Heroku", logo: herokuLogo }
+    ];
     const cybersecurity = [
-        { name: "Burp Suite", logo: "/src/assets/logos/burpsuite.png" },
-        { name: "Wireshark", logo: "/src/assets/logos/wireshark.png" },
-        { name: "Web Penetration Testing", logo: "/src/assets/logos/xss.png" },
-        { name: "Cyber Kill Chain Analysis", logo: "/src/assets/logos/killchain.png" }
+        { name: "Burp Suite", logo: burpsuiteLogo },
+        { name: "Wireshark", logo: wiresharkLogo },
+        { name: "Web Penetration Testing", logo: xssLogo },
+        { name: "Cyber Kill Chain Analysis", logo: killchainLogo }
     ];
     const aiAndData = [
-        { name: "Numpy", logo: "/src/assets/logos/numpy.png" },
-        { name: "Pandas", logo: "/src/assets/logos/pandas.png" },
-        { name: "Tensorflow", logo: "/src/assets/logos/tensorflow.png" },
-        { name: "Scikit-Learn", logo: "/src/assets/logos/scikitlearn.png" },
-        { name: "OpenAI API", logo: "/src/assets/logos/openai.png" }
+        { name: "Numpy", logo: numpyLogo },
+        { name: "Pandas", logo: pandasLogo },
+        { name: "Tensorflow", logo: tensorflowLogo },
+        { name: "Scikit-Learn", logo: scikitlearnLogo },
+        { name: "OpenAI API", logo: openaiLogo }
     ];
     const developmentMethodologies = [
-        { name: "SCRUM", logo: "/src/assets/logos/scrum.png" },
-        { name: "Agile Development", logo: "/src/assets/logos/agile.png" },
-        { name: "UML", logo: "/src/assets/logos/uml.png" }
+        { name: "SCRUM", logo: scrumLogo },
+        { name: "Agile Development", logo: agileLogo },
+        { name: "UML", logo: umlLogo }
     ];
     const testing = [
-        { name: "JUnit", logo: "/src/assets/logos/junit.png" },
-        { name: "Python unittest", logo: "/src/assets/logos/pythonunittest.png" }
+        { name: "JUnit", logo: junitLogo },
+        { name: "Python unittest", logo: pythonunittestLogo }
     ];
     return (
         <div className="prose max-w-5xl mx-auto">

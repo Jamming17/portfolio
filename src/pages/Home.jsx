@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import stonehengeImg from "../assets/stonehenge.jpg";
 
 export default function Home() {
     return (
         <div className="prose max-w-5xl mx-auto">
             <h1 className="text-4xl font-bold mb-4">Homepage</h1>
             <img
-                src="/src/assets/stonehenge.jpg"
+                src={stonehengeImg}
                 alt="A picture of me at Stonehenge"
                 className="float-right w-70 h-110 ml-6 mb-4 object-cover shadow-lg"
             />

@@ -1,5 +1,41 @@
 import ProjectInstance from "../components/ProjectInstance";
 
+import projHomepage from "../assets/projects/project_homepage.png";
+import projJavaExplanation from "../assets/projects/project_java_explanation.png";
+import projRustComprehension from "../assets/projects/project_rust_comprehension.png";
+import projPythonGeneration from "../assets/projects/project_python_generation.png";
+import projClassDiagram from "../assets/projects/project_class_diagram.png";
+
+import nutrivibeProfile from "../assets/projects/nutrivibe_profile.png";
+import nutrivibePosts from "../assets/projects/nutrivibe_posts.png";
+import nutrivibePostCreation from "../assets/projects/nutrivibe_post_creation.png";
+import nutrivibeChallenges from "../assets/projects/nutrivibe_challenges.png";
+import nutrivibeChallengeProgression from "../assets/projects/nutrivibe_challenge_progression.png";
+import nutrivibeLiveChat from "../assets/projects/nutrivibe_live_chat.png";
+
+import adAuctionBefore from "../assets/projects/ad_auction_ui_before.png";
+import adAuctionAfter from "../assets/projects/ad_auction_ui_after.png";
+import adAuctionLoad from "../assets/projects/ad_auction_load.png";
+import adAuctionStoryboard from "../assets/projects/ad_auction_storyboard.png";
+import adAuctionUml from "../assets/projects/ad_auction_uml.png";
+
+import tetrecsMenu from "../assets/projects/tetrecs_menu.png";
+import tetrecsGame from "../assets/projects/tetrecs_game.png";
+import tetrecsMultiplayer from "../assets/projects/tetrecs_multiplayer.png";
+import tetrecsJavadocs from "../assets/projects/tetrecs_javadocs.png";
+
+import cbsCalendar from "../assets/projects/cbs_calendar.png";
+import cbsEventView from "../assets/projects/cbs_event_view.png";
+import cbsMultipleEventView from "../assets/projects/cbs_multiple_event_view.png";
+import cbsRequestsApproval from "../assets/projects/cbs_requests_approval.png";
+import cbsCreateEvent from "../assets/projects/cbs_create_event.png";
+import cbsEditDetails from "../assets/projects/cbs_edit_details.png";
+
+import sandwichBusSandwiches1 from "../assets/projects/sandwich_bus_sandwiches1.png";
+import sandwichBusSandwiches2 from "../assets/projects/sandwich_bus_sandwiches2.png";
+import sandwichBusHomepage from "../assets/projects/sandwich_bus_homepage.png";
+import sandwichBusContact from "../assets/projects/sandwich_bus_contact.png";
+
 export default function Projects() {
     const projects = [
         { 
@@ -13,11 +49,11 @@ export default function Projects() {
                 </p>
             ),
             images: [
-                {src: "/src/assets/projects/project_homepage.png", caption: "The language selection page of my project"},
-                {src: "/src/assets/projects/project_java_explanation.png", caption: "Variable basics being explained to the user in Java"},
-                {src: "/src/assets/projects/project_rust_comprehension.png", caption: 'A "comprehension" question on functions basics in Rust'},
-                {src: "/src/assets/projects/project_python_generation.png", caption: 'A "generation" question on file handling in Python'},
-                {src: "/src/assets/projects/project_class_diagram.png", caption: "Java class diagram for the finished project"}
+                {src: projHomepage, caption: "The language selection page of my project"},
+                {src: projJavaExplanation, caption: "Variable basics being explained to the user in Java"},
+                {src: projRustComprehension, caption: 'A "comprehension" question on functions basics in Rust'},
+                {src: projPythonGeneration, caption: 'A "generation" question on file handling in Python'},
+                {src: projClassDiagram, caption: "Java class diagram for the finished project"}
             ]
         },
         {
@@ -30,12 +66,12 @@ export default function Projects() {
                 </p>
             ),
             images: [
-                {src: "/src/assets/projects/nutrivibe_profile.png", caption: "A NutriVibe user's profile"},
-                {src: "/src/assets/projects/nutrivibe_posts.png", caption: "A list of user posts"},
-                {src: "/src/assets/projects/nutrivibe_post_creation.png", caption: "Creating a recipe post"},
-                {src: "/src/assets/projects/nutrivibe_challenges.png", caption: "A list of user challenges"},
-                {src: "/src/assets/projects/nutrivibe_challenge_progression.png", caption: "The progress page of a challenge"},
-                {src: "/src/assets/projects/nutrivibe_live_chat.png", caption: "NutriVibe's live chat feature"}
+                {src: nutrivibeProfile, caption: "A NutriVibe user's profile"},
+                {src: nutrivibePosts, caption: "A list of user posts"},
+                {src: nutrivibePostCreation, caption: "Creating a recipe post"},
+                {src: nutrivibeChallenges, caption: "A list of user challenges"},
+                {src: nutrivibeChallengeProgression, caption: "The progress page of a challenge"},
+                {src: nutrivibeLiveChat, caption: "NutriVibe's live chat feature"}
             ]
         },
         {
@@ -49,11 +85,11 @@ export default function Projects() {
                 </p>
             ),
             images: [
-                {src: "/src/assets/projects/ad_auction_ui_before.png", caption: "Ad auction program before loading data"},
-                {src: "/src/assets/projects/ad_auction_ui_after.png", caption: "Ad auction program after loading data"},
-                {src: "/src/assets/projects/ad_auction_load.png", caption: "The screen to load data from a file"},
-                {src: "/src/assets/projects/ad_auction_storyboard.png", caption: "Storyboard created during the planning phase"},
-                {src: "/src/assets/projects/ad_auction_uml.png", caption: "One of the UML diagrams we used in the planning phase"}
+                {src: adAuctionBefore, caption: "Ad auction program before loading data"},
+                {src: adAuctionAfter, caption: "Ad auction program after loading data"},
+                {src: adAuctionLoad, caption: "The screen to load data from a file"},
+                {src: adAuctionStoryboard, caption: "Storyboard created during the planning phase"},
+                {src: adAuctionUml, caption: "One of the UML diagrams we used in the planning phase"}
             ]
         },
         {
@@ -77,10 +113,10 @@ export default function Projects() {
                 </p>
             ),
             images: [
-                {src: "/src/assets/projects/tetrecs_menu.png", caption: (<span>The main menu of the game with art by <a href="https://www.youtube.com/@AJTSpace" className="underline">AJTSpace</a></span>)},
-                {src: "/src/assets/projects/tetrecs_game.png", caption: "Singleplayer mode"},
-                {src: "/src/assets/projects/tetrecs_multiplayer.png", caption: "Synced multiplayer lobby"},
-                {src: "/src/assets/projects/tetrecs_javadocs.png", caption: "A Javadoc showing the finished project's class hierarchy"}
+                {src: tetrecsMenu, caption: (<span>The main menu of the game with art by <a href="https://www.youtube.com/@AJTSpace" className="underline">AJTSpace</a></span>)},
+                {src: tetrecsGame, caption: "Singleplayer mode"},
+                {src: tetrecsMultiplayer, caption: "Synced multiplayer lobby"},
+                {src: tetrecsJavadocs, caption: "A Javadoc showing the finished project's class hierarchy"}
             ]
         },
         {
@@ -93,12 +129,12 @@ export default function Projects() {
                 </p>
             ),
             images: [
-                {src: "/src/assets/projects/cbs_calendar.png", caption: "The main calendar page of the application"},
-                {src: "/src/assets/projects/cbs_event_view.png", caption: "Viewing a calendar event"},
-                {src: "/src/assets/projects/cbs_multiple_event_view.png", caption: "Viewing multiple events on one day"},
-                {src: "/src/assets/projects/cbs_requests_approval.png", caption: "Staff can approve customer/event requests"},
-                {src: "/src/assets/projects/cbs_create_event.png", caption: "Staff can create events"},
-                {src: "/src/assets/projects/cbs_edit_details.png", caption: "Users can edit their personal details"}
+                {src: cbsCalendar, caption: "The main calendar page of the application"},
+                {src: cbsEventView, caption: "Viewing a calendar event"},
+                {src: cbsMultipleEventView, caption: "Viewing multiple events on one day"},
+                {src: cbsRequestsApproval, caption: "Staff can approve customer/event requests"},
+                {src: cbsCreateEvent, caption: "Staff can create events"},
+                {src: cbsEditDetails, caption: "Users can edit their personal details"}
             ]
         },
         {
@@ -109,10 +145,10 @@ export default function Projects() {
                 </p>
             ),
             images: [
-                {src: "/src/assets/projects/sandwich_bus_sandwiches1.png", caption: "Top of the sandwiches page"},
-                {src: "/src/assets/projects/sandwich_bus_sandwiches2.png", caption: "The rest of the sandwiches page"},
-                {src: "/src/assets/projects/sandwich_bus_homepage.png", caption: "The homepage of the Sandwich Bus"},
-                {src: "/src/assets/projects/sandwich_bus_contact.png", caption: "The contact form page"}
+                {src: sandwichBusSandwiches1, caption: "Top of the sandwiches page"},
+                {src: sandwichBusSandwiches2, caption: "The rest of the sandwiches page"},
+                {src: sandwichBusHomepage, caption: "The homepage of the Sandwich Bus"},
+                {src: sandwichBusContact, caption: "The contact form page"}
             ]
         }
     ];

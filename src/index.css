@@ -19,6 +19,14 @@
   margin: 0.5rem;
 }
 
-.swiper-custom .swiper-pagination {
-  margin-top: 0.5rem;
+.swiper-button-next {
+  padding: 100px 20px 100px 40px;
+  top: 60%;
+  transform: translateY(-40%);
+}
+
+.swiper-button-prev {
+  padding: 100px 40px 100px 20px;
+  top: 60%;
+  transform: translateY(-40%);
 }

@@ -7,7 +7,7 @@ export default function ProjectInstance({ title, text, images = [], imageLeft = 
     const hasImages = images.length > 0;
 
     return (
-        <div className={"my-12 max-w-4xl mx-auto"}>
+        <div className={"my-12 max-w-5xl mx-auto"}>
             <h2 className="mb-4 py-1 bg-gray-300/90 text-2xl text-gray-800 text-center font-bold shadow rounded">{title}</h2>
             {hasImages && (
                 <div className="relative">

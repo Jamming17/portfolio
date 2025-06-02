@@ -12,3 +12,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Custom colours for swipers (image slideshows) on Projects page */
+.swiper-custom .swiper-pagination-bullte {
+  background-color: red !important;
+  margin: 0.5rem;
+}
+
+.swiper-custom .swiper-pagination {
+  margin-top: 0.5rem;
+}

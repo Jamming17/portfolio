@@ -20,16 +20,16 @@ The website is built using the following tools:
 - Netlify for simple, cheap frontend deployment
 
 
-### Phase 2 - Blog Frontend (IN PROGRESS)
+### Phase 2 - Blog Frontend (COMPLETE - Check blog branch)
 
-Once phase 1 is complete and deployed, I will add another page to the frontend of the project. This will be a blog feed where I can post about new things I am learning or doing in my life.
+Once phase 1 was complete and deployed, I added another page to the frontend of the project. This is a blog feed where I can post about new things I am learning or doing in my life.
 
 The blog page will have a log in system with proper authentication and authorisation methods for security purposes. Only my user will be authorised to post on the blog feed, but any user can create an account, log in and leave comments.
 
-The frontend of the blog part of the project will be built using the same technologies as the portfolio in Phase 1, along with JSON Web Tokens stored locally for authentication.
+The frontend of the blog part of the project is built using the same technologies as the portfolio in Phase 1.
 
 
-### Phase 3 - Blog Backend
+### Phase 3 - Blog Backend (IN PROGRESS)
 
 The backend of the blog will be an API and database to handle registering and logging in, blog post creation and commenting. The plan for this phase is not exact, but here are the technologies I plan to use for completing this:
 - Express.js as the backend API framework with Node.js as the runtime

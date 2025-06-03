@@ -3,16 +3,16 @@
 This is a portfolio website that I am building as a full-stack application from scratch. The project will be split into four phases which I will describe below.
 
 
-### Phase 1 - Portfolio (IN PROGRESS)
+### Phase 1 - Portfolio (COMPLETE)
 
-The main goal of this phase is to learn and integrate some new frontend technologies that I have never used before without having to worry about a complicated backend setup (for now). I will be hosting a website on Netlify once this phase is complete and this README will be updated when that's done.
+The main goal of this phase is to learn and integrate some new frontend technologies that I have never used before without having to worry about a complicated backend setup. I have hosted this website on Netlify which automatically redeploys the site when the main branch is updated. Future work will happen on a separate branch until it is production-ready.
 
-The website will contain three main pages:
+The website contains three main pages:
 - A **Homepage** where you can find basic information about me and my goals
 - A **Projects** page where you can view details on my past projects
 - A **Competencies** page where you can view all programming languages, frameworks and tools that I have experience in
 
-The website will be built using the following tools:
+The website is built using the following tools:
 - Node.js as the development environment to manage dependencies and scripts
 - React to build the frontend to make easily reusable JSX components
 - Vite as the build tool to transpile the code into a browser-readable format
@@ -20,7 +20,7 @@ The website will be built using the following tools:
 - Netlify for simple, cheap frontend deployment
 
 
-### Phase 2 - Blog Frontend
+### Phase 2 - Blog Frontend (IN PROGRESS)
 
 Once phase 1 is complete and deployed, I will add another page to the frontend of the project. This will be a blog feed where I can post about new things I am learning or doing in my life.
 

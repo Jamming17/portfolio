@@ -7,6 +7,7 @@ export default function Header() {
                 <Link to="/">Home</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/competencies">Competencies</Link>
+                <Link to="/blog">Blog</Link>
             </nav>
         </header>
     );

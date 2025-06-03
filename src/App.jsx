@@ -18,9 +18,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/competencies" element={<Competencies />} />
-          <Route path="/blog" elements={<BlogFeed />} />
-          <Route path="/blog/login" elements={<Login />} />
-          <Route path="/blog/register" elements={<Register />} />
+          <Route path="/blog" element={<BlogFeed />} />
+          <Route path="/blog/login" element={<Login />} />
+          <Route path="/blog/register" element={<Register />} />
           <Route path="*" element={<h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>} />
         </Route>
       </Routes>

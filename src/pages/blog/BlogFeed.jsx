@@ -1,1 +1,5 @@
-<h1>BlogFeed</h1>
+export default function BlogFeed() {
+    return (
+        <h1>Blog Feed Page</h1>
+    );
+}

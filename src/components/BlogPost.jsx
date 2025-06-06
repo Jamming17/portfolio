@@ -1,14 +1,14 @@
 import { useState } from "react";
 import BlogComment from "./BlogComment";
 
-export default function BlogPost({ title, text, user, date, comments }) {
+export default function BlogPost({ title, content, username, datetime, comments }) {
     const [showComments, setShowComments] = useState(false)
     
     return (
         <div className="mb-6 p-4 rounded shadow bg-gray-300/90 text-gray-800">
             <h3 className="text-3xl font-bold">{title}</h3>
-            <p><span className="font-bold">by {user}</span> <span className="text-sm text-gray-500">on {date}</span></p>
-            <p className="my-2">{text}</p>
+            <p><span className="font-bold">by {username}</span> <span className="text-sm text-gray-500">on {datetime}</span></p>
+            <p className="my-2">{content}</p>
             
             
             <button

@@ -30,7 +30,7 @@ export default function Post() {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,
                 },
-                body: JSON.stringify({ title, content })
+                body: JSON.stringify({ username: user.username, title, content, datetime: new Date().toISOString()})
             });
             const data = await res.json();
 

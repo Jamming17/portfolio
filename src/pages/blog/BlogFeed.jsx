@@ -1,34 +1,69 @@
+import { useState, useEffect, useRef } from "react";
 import BlogPost from "../../components/BlogPost";
 
 export default function BlogFeed() {
-const dummyBlogs = [
-    {
-        title: "Test post",
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        user: "JammingTEST",
-        date: "2025-06-03",
-        comments: [
-            { text: "Nice post! I was just wondering if meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow meow?", user: "Tommi", date: "2025-06-03" },
-            { text: "Thanks for sharing", user: "Harroldinio", date: "2025-06-03" }
-        ]
-    },
-    {
-        title: "Test post 2 electric boogaloo",
-        text: "AAAAAA meow meow meow meow meow woof woof woof woof woof",
-        user: "JammingTEST",
-        date: "2025-06-03",
-        comments: [
-            { text: "Meow meow meow", user: "lychee", date: "2025-06-03" },
-            { text: "Great whickering stallions!", user: "Doctor Whooves", date: "2025-06-03" }
-        ]
-    }
-]
+
+    const [posts, setPosts] = useState([]);
+    const [offset, setOffset] = useState(0);
+    const [areThereMorePosts, setAreThereMorePosts] = useState(true);
+    const [loading, setLoading] = useState(false);
+    const fetchedInitialPosts = useRef(false);
+
+    const fetchPosts = async() => {
+        if (loading || !areThereMorePosts) {
+            return;
+        }
+        setLoading(true);
+
+        try {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}posts?offset=${offset}`);
+            const data = await res.json();
+            if (!res.ok) {
+                console.error(data.error || "Failed to fetch blog posts");
+                return;
+            }
+            
+            setPosts(prev => [
+                ...prev,
+                ...data.posts.map(post => ({
+                    ...post,
+                    datetime: new Date(post.datetime).toISOString().slice(0,10),
+                    comments: [] }))]);
+            setOffset(prev => prev + 10);
+
+            if (data.posts.length < 10) {
+                setAreThereMorePosts(false);
+            }
+        } catch (err) {
+            console.error(err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        if (!fetchedInitialPosts.current) {
+            fetchPosts();
+            fetchedInitialPosts.current = true;
+        }
+    }, []);
+
 
     return (
         <div className="max-w-4xl p-4 mx-auto">
-            {dummyBlogs.map((blog, i) => (
+            {posts.map((blog, i) => (
                 <BlogPost key={i} {...blog} />
             ))}
+
+            {areThereMorePosts ? (
+                <div className="text-center mt-4">
+                    <button onClick={fetchPosts} disabled={loading} className="bg-purple-800 text-white px-4 py-2 rounded shadow disabled:opacity-50 hover:bg-purple-700">
+                        {loading ? "Loading..." : "Load More"}
+                    </button>
+                </div>
+            ) : (
+                <p className="text-center mt-4 text-gray-600">You have reached the beginning of time! There are no more posts to show.</p>
+            )}
         </div>
     );
 }

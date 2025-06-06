@@ -7,6 +7,7 @@ import Competencies from "./pages/Competencies";
 import BlogFeed from "./pages/blog/BlogFeed";
 import Login from "./pages/blog/Login";
 import Register from "./pages/blog/Register";
+import Post from "./pages/blog/Post";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/blog" element={<BlogFeed />} />
           <Route path="/blog/login" element={<Login />} />
           <Route path="/blog/register" element={<Register />} />
+          <Route path="/blog/post" element={<Post />} />
           <Route path="*" element={<h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>} />
         </Route>
       </Routes>

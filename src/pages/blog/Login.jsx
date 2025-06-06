@@ -4,7 +4,7 @@ import { AuthContext } from "../../context/AuthContext";
 
 
 export default function Login() {
-    const { login, logout } = useContext(AuthContext);
+    const { login } = useContext(AuthContext);
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -49,7 +49,6 @@ export default function Login() {
             <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} className="w-full mb-2 p-2 border bg-gray-200" />
             
             <button className="bg-purple-800 text-white text-xl px-8 py-1 mt-4 rounded shadow" onClick={handleLogin}>Confirm</button>
-            <button className="bg-purple-800 text-white text-xl px-8 py-1 mt-4 rounded shadow" onClick={handleLogout}>LOGOUT</button>
             
             {error && <p className="text-red-600 mt-4">{error}</p>}
             {success && <p className="text-green-600 mt-4">{success}</p>}

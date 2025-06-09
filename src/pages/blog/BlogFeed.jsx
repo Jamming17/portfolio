@@ -57,7 +57,10 @@ export default function BlogFeed() {
                 <BlogPost
                     key={blog.id}
                     {...blog}
-                    onDelete={deletedID => setPosts(prev => prev.filter(p => p.id !== deletedID))}
+                    onDelete={deletedID => {
+                        setPosts(prev => prev.filter(p => p.id !== deletedID));
+                        setOffset(offset - 1);
+                    }}
                     onEdit={(id, editedTitle, editedContent) => {
                         setPosts(prev => prev.map(post => post.id === id ? { ...post, title: editedTitle, content: editedContent } : post));
                     }}

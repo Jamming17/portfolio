@@ -26,7 +26,7 @@ export default function BlogPost({ id, title, content, username, datetime, onDel
         setOffset(0);
     }
 
-    const startStopEditing = async() => {
+    const startStopEditing = () => {
         setIsEditing(!isEditing);
         setEditedTitle(title);
         setEditedContent(content);
@@ -70,7 +70,7 @@ export default function BlogPost({ id, title, content, username, datetime, onDel
                     method: "DELETE",
                     headers: {
                         Authorization: `Bearer ${token}`,
-                    },
+                    }
                 });
                 const data = await res.json();
                 if (!res.ok) {
@@ -239,7 +239,17 @@ export default function BlogPost({ id, title, content, username, datetime, onDel
             {showComments && (
                 <div className="mt-3">
                     {comments.map((comment, index) => (
-                        <BlogComment key={index} {...comment} />
+                        <BlogComment
+                            key={index}
+                            {...comment}
+                            onDeleteComment={deletedID => {
+                                setComments(prev => prev.filter(p => p.id !== deletedID));
+                                setOffset(offset - 1);
+                            }}
+                            onEditComment={(id, editedContent) => {
+                                setComments(prev => prev.map(post => post.id === id ? { ...post, content: editedContent} : post))
+                            }}
+                        />
                     ))}
                     {areThereMoreComments && (
                         <button onClick={fetchComments} className="bg-purple-800 text-white px-8 py-1 rounded shadow">View More...</button>

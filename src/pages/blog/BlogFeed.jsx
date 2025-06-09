@@ -28,8 +28,9 @@ export default function BlogFeed() {
                 ...data.posts.map(post => ({
                     ...post,
                     datetime: new Date(post.datetime).toISOString().slice(0,10),
-                    comments: [] }))
-                ]);
+                    comments: [],
+                }))
+            ]);
             setOffset(prev => prev + 10);
 
             if (data.posts.length < 10) {
@@ -53,7 +54,14 @@ export default function BlogFeed() {
     return (
         <div className="max-w-4xl p-4 mx-auto">
             {posts.map((blog, i) => (
-                <BlogPost key={i} {...blog} />
+                <BlogPost
+                    key={blog.id}
+                    {...blog}
+                    onDelete={deletedID => setPosts(prev => prev.filter(p => p.id !== deletedID))}
+                    onEdit={(id, editedTitle, editedContent) => {
+                        setPosts(prev => prev.map(post => post.id === id ? { ...post, title: editedTitle, content: editedContent } : post));
+                    }}
+                />
             ))}
 
             {areThereMorePosts ? (

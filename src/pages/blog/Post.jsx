@@ -30,11 +30,11 @@ export default function Post() {
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`,
                 },
-                body: JSON.stringify({ username: user.username, title, content, datetime: new Date().toISOString()})
+                body: JSON.stringify({ username: user.username, title, content, datetime: new Date().toISOString() })
             });
             const data = await res.json();
 
-            if(!res.ok) {
+            if (!res.ok) {
                 setError(data.error || "Failed to create post");
             } else {
                 navigate("/blog");
@@ -43,7 +43,7 @@ export default function Post() {
             console.error(err);
             setError("Something went wrong");
         }
-    };
+    }
 
     return (
         <div className="p-4 mt-16 max-w-3xl mx-auto text-center bg-gray-300/90 text-gray-800 rounded">

@@ -28,7 +28,8 @@ export default function BlogFeed() {
                 ...data.posts.map(post => ({
                     ...post,
                     datetime: new Date(post.datetime).toISOString().slice(0,10),
-                    comments: [] }))]);
+                    comments: [] }))
+                ]);
             setOffset(prev => prev + 10);
 
             if (data.posts.length < 10) {

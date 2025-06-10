@@ -1,5 +1,6 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { sanitise } from "../utility/sanitise";
 
 export default function BlogComment( {id, content, username, datetime, onDeleteComment, onEditComment} ) {
     const { user, token } = useContext(AuthContext);
@@ -17,6 +18,12 @@ export default function BlogComment( {id, content, username, datetime, onDeleteC
 
     const commentConfirmEdit = async() => {
         setError(null);
+
+        if (editedContent.length > 1000) {
+            setError("Comment must be shorter than 1000 characters");
+            return;
+        }
+
         try {
             const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}comment/edit?commentID=${id}`, {
                 method: "PUT",
@@ -24,7 +31,7 @@ export default function BlogComment( {id, content, username, datetime, onDeleteC
                     "Content-Type": "application/json",
                     Authorization: `Bearer ${token}`
                 },
-                body: JSON.stringify({ content: editedContent })
+                body: JSON.stringify({ content: sanitise(editedContent) })
             });
             const data = await res.json();
             if (!res.ok) {
@@ -75,19 +82,21 @@ export default function BlogComment( {id, content, username, datetime, onDeleteC
                         <p> <span className="pb-1 font-bold">{username}</span> <span className="text-xs text-gray-500">on {datetime}</span></p>
                         {(user && (user.admin || user.username === username)) &&
                             <div className="flex">
-                                <button onClick={startStopEditing} className="flex bg-purple-800 text-xs text-white px-4 py-1 mr-1 rounded shadow">Edit</button>
-                                <button onClick={deleteComment} className="flex bg-red-800 text-xs text-white px-4 py-1 rounded shadow">{deleteCount < 2 ? "Delete" : "DELETE"}</button>
+                                <button onClick={startStopEditing} className="flex bg-purple-800 hover:bg-purple-800/85 active:bg-purple-900 text-xs text-white px-4 py-1 mr-1 rounded shadow">Edit</button>
+                                <button onClick={deleteComment} className="flex bg-red-800 hover:bg-red-800/85 active:bg-red-900 text-xs text-white px-4 py-1 rounded shadow">{deleteCount < 2 ? "Delete" : "DELETE"}</button>
                             </div>
                         }
                     </div>
                     <p className="text-sm">{content}</p>
                 </div>
             ) : (
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                     <textarea placeholder="Comment" value={editedContent} onChange={(e) => setEditedContent(e.target.value)} className="flex w-full p-2 mr-2 border bg-gray-200 h-10" />
-                    <button onClick={commentConfirmEdit} className="flex bg-purple-800 text-sm text-white px-6 py-2 rounded shadow">Submit</button>
+                    <button onClick={commentConfirmEdit} className="flex bg-purple-800 hover:bg-purple-800/85 active:bg-purple-900 text-sm text-white px-6 py-2 mr-2 rounded shadow">Submit</button>
+                    <button onClick={startStopEditing} className="flex bg-purple-800 hover:bg-purple-800/85 active:bg-purple-900 text-sm text-white px-6 py-2 rounded shadow">Cancel</button>
                 </div>
             )}
+            {error && <p className="text-red-600 mt-4">{error}</p>} 
         </div>
     );
 }

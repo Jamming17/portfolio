@@ -30,3 +30,13 @@
   top: 60%;
   transform: translateY(-40%);
 }
+
+pre {
+  font-family: inherit;
+  font-size: inherit;
+  white-space: pre-wrap;
+  margin: 0 0 1em;
+  padding: 0;
+  line-height: 1.2;
+  color:inherit;
+}

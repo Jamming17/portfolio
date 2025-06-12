@@ -1,6 +1,8 @@
 # Portfolio Project
 
-This is a portfolio website that I am building as a full-stack application from scratch. The project will be split into four phases which I will describe below.
+This is a portfolio website that I have built as a full-stack application from scratch. The project was be split into four phases which are described below.
+
+Now that it is complete, the website is hosted on https://jackchiplin-portfolio.netlify.app/blog. Currently, the site is **not optimised for mobile use**. This means that some images cannot be displayed correctly and elements of the header are unreachable such as the blog (/blog), login (/login) and register (/register) pages. I will update this README in future once I have worked on fixing these issues!
 
 
 ### Phase 1 - Portfolio (COMPLETE)
@@ -20,7 +22,7 @@ The website is built using the following tools:
 - Netlify for simple, cheap frontend deployment
 
 
-### Phase 2 - Blog Frontend (COMPLETE - Check blog branch)
+### Phase 2 - Blog Frontend (COMPLETE)
 
 Once phase 1 was complete and deployed, I added another page to the frontend of the project. This is a blog feed where I can post about new things I am learning or doing in my life.
 
@@ -29,28 +31,28 @@ The blog page will have a log in system with proper authentication and authorisa
 The frontend of the blog part of the project is built using the same technologies as the portfolio in Phase 1.
 
 
-### Phase 3 - Blog Backend (IN PROGRESS)
+### Phase 3 - Blog Backend (COMPLETE)
 
-The backend of the blog will be an API and database to handle registering and logging in, blog post creation and commenting. The plan for this phase is not exact, but here are the technologies I plan to use for completing this:
+The backend of the blog has an API and database to handle registering and logging in, blog post creation and commenting. I will be creating a secure REST API using many different HTTP methods for communication with the backend and database:
 - Express.js as the backend API framework with Node.js as the runtime
 - PostgreSQL relational database
 - Fully integrated JWT authentication
 
 
-### Phase 4 - Final Deployment
+### Phase 4 - Final Deployment (COMPLETE)
 
-The frontend of the project will be deployed on Netlify as previously mentioned.
+The frontend of the project is deployed on Netlify as previously mentioned.
 
-The backend of the project will be deployed on Heroku with Heroku's Postgres integration for the relational database.
+The backend of the project was originally going to be hosted on Heroku, but I decided against it. Instead, the backend and database are hosted together on my boyfriend's Arch Linux server and are running persistently. My reasons for this decision can be seen on the blog itself!
 
 
 # Local Build Instructions
-To build this website yourself, open up a terminal and navigate to where you want the project to be located. Begin by cloning the repository and moving into the directory:
+To build this frontend website yourself, open up a terminal and navigate to where you want the project to be located. Begin by cloning the repository and moving into the directory:
 ```bash
-git clone https://github.com/Jamming17.portfolio
+git clone https://github.com/Jamming17/portfolio.git
 cd portfolio
 ```
-Make sure you have [Node.js](https://nodejs.org/en/download) installed on your system (v20 or later recommended). Once installed, run the following command to install all packages for the project.
+Make sure you have [node.js](https://nodejs.org/en/download) and npm installed on your system (node v20 or later recommended). Once installed, run the following command to install all packages for the project.
 ```bash
 npm install
 ```

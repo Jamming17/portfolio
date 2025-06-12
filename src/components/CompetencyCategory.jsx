@@ -1,6 +1,7 @@
 export default function CompetencyCategory({ title, tools }) {
     return (
-        <div className="mb-10">
+        <div className="mb-5 md:mb-10">
+            <hr className="md:hidden mb-5" />
             <h2 className="mb-4 py-1 bg-gray-300/90 text-3xl text-gray-800 text-center font-bold shadow rounded">{title}</h2>
             <div className="flex flex-wrap gap-4 text-center justify-center">
                 {tools.map((tool, index) => (

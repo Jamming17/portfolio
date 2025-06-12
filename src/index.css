@@ -20,13 +20,13 @@
 }
 
 .swiper-button-next {
-  padding: 100px 20px 100px 40px;
+  padding: 100px 20px 130px 40px;
   top: 60%;
   transform: translateY(-40%);
 }
 
 .swiper-button-prev {
-  padding: 100px 40px 100px 20px;
+  padding: 100px 40px 130px 20px;
   top: 60%;
   transform: translateY(-40%);
 }

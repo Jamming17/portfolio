@@ -155,7 +155,7 @@ export default function Projects() {
 
     return (
         <div className="prose max-w-5xl mx-auto">
-            <h1 className="text-4xl font-bold mb-4">My Projects</h1>
+            <h1 className="text-4xl font-bold mb-4 mt-6 md:mt-0">My Projects</h1>
             <p className="text-lg">
                 Below is a list of my best projects I have worked on both at and outside of college and university. If you have any further questions on any of the projects, feel free to reach out to me using the contact details in the footer of the page. Lastly, projects are in reverse chronological order, so newest first.
             </p>

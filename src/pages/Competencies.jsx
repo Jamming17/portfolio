@@ -17,11 +17,12 @@ import nodejsLogo from "../assets/logos/nodejs.png";
 import expressjsLogo from "../assets/logos/expressjs.png";
 import azurepythonfunctionappLogo from "../assets/logos/azurepythonfunctionapp.png";
 import cosmosdbLogo from "../assets/logos/cosmosdb.png";
+import postgresqlLogo from "../assets/logos/postgresql.png";
 
 import azureLogo from "../assets/logos/azure.png";
 import gaeLogo from "../assets/logos/gae.png";
 import netlifyLogo from "../assets/logos/netlify.png";
-import herokuLogo from "../assets/logos/heroku.png";
+import linuxserver from "../assets/logos/linuxserver.png";
 
 import burpsuiteLogo from "../assets/logos/burpsuite.png";
 import wiresharkLogo from "../assets/logos/wireshark.png";
@@ -62,13 +63,14 @@ export default function Competencies() {
         { name: "Node.js", logo: nodejsLogo },
         { name: "Express.js", logo: expressjsLogo },
         { name: "Azure Python Functions", logo: azurepythonfunctionappLogo },
-        { name: "CosmosDB", logo: cosmosdbLogo }
+        { name: "CosmosDB", logo: cosmosdbLogo },
+        { name: "PostgreSQL", logo: postgresqlLogo}
     ];
     const cloudAndDeployment = [
         { name: "Microsoft Azure", logo: azureLogo },
         { name: "Google App Engine", logo: gaeLogo },
         { name: "Netlify", logo: netlifyLogo },
-        { name: "Heroku", logo: herokuLogo }
+        { name: "Linux Server", logo: linuxserver }
     ];
     const cybersecurity = [
         { name: "Burp Suite", logo: burpsuiteLogo },
@@ -94,7 +96,7 @@ export default function Competencies() {
     ];
     return (
         <div className="prose max-w-5xl mx-auto">
-            <h1 className="text-4xl font-bold mb-4">Competencies</h1>
+            <h1 className="text-4xl font-bold mb-4 mt-6 md:mt-0">Competencies</h1>
             <p className="text-lg mb-10">
                 Below is a list of programming languages, software, frameworks, libraries and other tools that I have learned and practiced as a computer scientist. I have of course used more tools than just those listed below, but I have chosen to list only tools that I either know well now or would be able to get back into comfortably quickly.<br className="mb-6" />
                 If you require more information about my skill in a particular area, feel free to contact me on one of the platforms listed in the footer of the page!

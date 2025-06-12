@@ -2,8 +2,7 @@
 
 This is a portfolio website that I have built as a full-stack application from scratch. The project was be split into four phases which are described below.
 
-Now that it is complete, the website is hosted on https://jackchiplin-portfolio.netlify.app/blog. Currently, the site is **not optimised for mobile use**. This means that some images cannot be displayed correctly and elements of the header are unreachable such as the blog (/blog), login (/login) and register (/register) pages. I will update this README in future once I have worked on fixing these issues!
-
+Now that it is complete, the website is hosted on https://jackchiplin-portfolio.netlify.app/blog. This should work well on both a desktop and mobile! Please contact me if you find any issues!
 
 ### Phase 1 - Portfolio (COMPLETE)
 

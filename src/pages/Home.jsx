@@ -4,11 +4,11 @@ import stonehengeImg from "../assets/stonehenge.jpg";
 export default function Home() {
     return (
         <div className="prose max-w-5xl mx-auto">
-            <h1 className="text-4xl font-bold mb-4">Homepage</h1>
+            <h1 className="text-4xl font-bold mb-4 mt-6 md:mt-0">Homepage</h1>
             <img
                 src={stonehengeImg}
                 alt="A picture of me at Stonehenge"
-                className="float-right w-70 h-110 ml-6 mb-4 object-cover shadow-lg"
+                className="md:float-right w-70 h-110 ml-6 mb-4 object-cover shadow-lg"
             />
             <p className="text-lg">
                 Hello! My name is Jack and welcome to my website! This website has been fully built by me using my full-stack development skills. The code and more infomation about this site is available on my <a href="https://github.com/Jamming17/portfolio" className="underline">GitHub</a>.<br className="mb-6"/>

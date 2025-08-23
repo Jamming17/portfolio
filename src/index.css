@@ -14,7 +14,7 @@
 }
 
 /* Custom colours for swipers (image slideshows) on Projects page */
-.swiper-custom .swiper-pagination-bullte {
+.swiper-custom .swiper-pagination-bullet {
   background-color: red !important;
   margin: 0.5rem;
 }

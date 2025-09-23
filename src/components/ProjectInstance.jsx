@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -5,9 +6,29 @@ import "swiper/css/navigation";
 
 export default function ProjectInstance({ title, text, images = [], imageLeft = false }) {
     const hasImages = images.length > 0;
+    const ref = useRef(null);
+    const [visible, setVisible] = useState(false);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setVisible(true);
+                    observer.unobserve(ref.current);
+                }
+            },
+            {
+                threshold: 0.3
+            }
+        );
+        if (ref.current) observer.observe(ref.current);
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, []);
+    
     return (
-        <div className={"my-6 md:my-12 max-w-5xl mx-auto"}>
+        <div ref={ref} className={`my-6 md:my-12 max-w-5xl mx-auto transition-all duration-700 ease-out ${visible ? "opacity-100 translate-x-0" : imageLeft ? "opacity-0 translate-x-[-50px]" : "opacity-0 translate-x-[50px]"}`}>
             <hr className="md:hidden mb-6" />
             <h2 className="mb-4 py-1 bg-gray-300/90 text-2xl text-gray-800 text-center font-bold shadow rounded">{title}</h2>
             {hasImages && (

@@ -1,9 +1,16 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import stonehengeImg from "../assets/stonehenge.jpg";
 
 export default function Home() {
+    const [animate, setAnimate] = useState(false);
+
+    useEffect (() => {
+        setAnimate(true);
+    }, []);
+
     return (
-        <div className="prose max-w-5xl mx-auto">
+        <div className={`prose max-w-5xl mx-auto transition-all duration-700 ease-out ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}>
             <h1 className="text-4xl font-bold mb-4 mt-6 md:mt-0">Homepage</h1>
             <img
                 src={stonehengeImg}

@@ -22,8 +22,8 @@ export default function Post() {
         if(!title.trim() || !content.trim()) {
             setError("Title and content are required");
             return;
-        } else if (title.trim().length > 30) {
-            setError("Title must be less than 30 characters long");
+        } else if (title.trim().length > 60) {
+            setError("Title must be less than 60 characters long");
             return;
         }
 
